@@ -13,7 +13,7 @@ jobs:
           if: ${{always()}}
           uses: dawidd6/action-send-mail@v6
           with:
-            server_address: smtp.google.com
+            server_address: smtp.gmail.com
             # Optional port (defaults to 465)
             server_port: 465
             username: ${{secrets.USER_NAME}}
@@ -24,4 +24,4 @@ jobs:
             subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
             body: ${{github.job}} job in workflow ${{github.workflow}} of ${{github.repository}}
             # Optional attachment files (JSON type. require property 'path')
-            attachments: '[{"path":"Basic.py"}]'
+            attachments: Basic.py
