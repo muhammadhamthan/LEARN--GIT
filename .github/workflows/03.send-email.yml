@@ -6,6 +6,10 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            
+        - name: clone repo
+          uses: actions/checkout@v5
+              
         - name: message to colleague
           run: echo "Hey buddy"
 
@@ -24,4 +28,4 @@ jobs:
             subject: ${{github.job}} job of ${{github.repository}} has ${{job.status}}
             body: ${{github.job}} job in workflow ${{github.workflow}} of ${{github.repository}}
             # Optional attachment files (JSON type. require property 'path')
-            attachments: ./Basic.py
+            attachments: ./Basic.py #recever unable to receive the file
