@@ -13,10 +13,10 @@ jobs:
           if: ${{always()}}
           uses: dawidd6/action-send-mail@v6
           with:
-            host: smtp.google.com
+            server_address: smtp.google.com
             # Optional port (defaults to 465)
-            port: 465
-            account: ${{secrets.USER_NAME}}
+            server_port: 465
+            username: ${{secrets.USER_NAME}}
             password: ${{secrets.MAIL_PASSWORD}}
             sender: Learning How Github Actions works
             from: ${{secrets.MAIL_ADDRESS}}
