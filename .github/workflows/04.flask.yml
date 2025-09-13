@@ -11,6 +11,6 @@ jobs:
     steps:
     - name: Deploy in EC2
       env: 
-        PRIVATE_KEY: ${{secrets.SSH_KEYS}}
-        HOST_NAME: ${{secrets.HOST_NAME}}
-        USER_NAME: ${{secrets.USER_NAME}} 
+        PRIVATE_KEY: ${{secrets.EC2_SSH_KEYS}}
+        HOST_NAME: ${{secrets.EC2_HOST_NAME}}
+        USER_NAME: ${{secrets.EC2_USER_NAME}} 
